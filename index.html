@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mossback & Co.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --gray-top:#f4f4f4;
+      --gray-bot:#e8e8e8;
+      --about-bg:#0d1c2e;
+      --about-fg:#eef2f7;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family:'Libre Baskerville', serif;
+      overflow:hidden;
+    }
+
+    .panel{position:fixed; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;}
+    .home{
+      background: linear-gradient(180deg, var(--gray-top) 0%, var(--gray-bot) 100%);
+      z-index:1;
+    }
+    .about{
+      background: var(--about-bg);
+      color:var(--about-fg);
+      transform: translateY(-100%);
+      z-index:2;
+    }
+
+    body.show-about .about{ transform: translateY(0); transition: transform 620ms cubic-bezier(.22,.61,.36,1); }
+    body.show-about .home{ filter: blur(2px); }
+
+    h1 {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 3.8rem;
+      font-weight: 400;
+      color: #1e1e1e;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-shadow: 0 1px 1px rgba(0,0,0,0.05);
+      margin: 0 0 10px 0;
+      text-align: center;
+    }
+
+    .underline{
+      width:60%; max-width:340px; height:1.5px; background:linear-gradient(90deg,#a0a0a0 0%, #c5c5c5 100%); margin:10px auto 0; opacity:.6;
+    }
+
+    .btn-link{ margin-top:22px; display:inline-block; padding:10px 16px; border:1px solid #bfc3c9; color:#1e1e1e; text-decoration:none; border-radius:8px; transition:background .2s,border-color .2s; }
+    .btn-link:hover{ background:#f2f2f2; border-color:#9aa1ab; }
+
+    .about-inner{ max-width:900px; padding:48px 20px; text-align:center; }
+    .about h2{ margin:0 0 10px 0; font-weight:400; letter-spacing:.08em; text-transform:uppercase; }
+    .about .rule{ width:300px; height:1px; margin:0 auto 24px; background:linear-gradient(90deg,#9fb3c8 0%, #d7e0ea 100%); opacity:.7; }
+    .about p{ font-size:1.08rem; line-height:1.8; color: #e7ecf3; margin:0 0 16px 0; }
+    .about a{ color:#e7ecf3; }
+
+    .close{ margin-top:22px; display:inline-block; padding:10px 16px; border:1px solid #6e8aa6; color:#e7ecf3; text-decoration:none; border-radius:8px; transition:background .2s,border-color .2s; }
+    .close:hover{ background:#1a3553; border-color:#86a5c5; }
+
+    p.contact{
+      margin-top:30px;
+      font-size:1.1rem;
+      letter-spacing:0.03em;
+      color:#1e1e1e;
+      text-align:center;
+    }
+
+    @media (max-width:600px){ h1{font-size:2.6rem;} }
+  </style>
+</head>
+<body>
+  <section class="panel home">
+    <h1>Mossback &amp; Co.</h1>
+    <div class="underline"></div>
+    <a href="#about" class="btn-link" onclick="openAbout(event)">About Us</a>
+    <p class="contact">Contact: <a href='mailto:info@mossbackco.com' style='color:#1e1e1e;text-decoration:none;border-bottom:1px solid #b5b5b5;'>info@mossbackco.com</a></p>
+  </section>
+
+  <section class="panel about" id="about" aria-hidden="true">
+    <div class="about-inner">
+      <h2>About Us</h2>
+      <div class="rule"></div>
+      <p>Mossback &amp; Co. is a privately held investment firm based in Texas, focused on pursuing opportunities across diverse asset classes — with a core emphasis on real estate and private equity.</p>
+      <p>We combine traditional investment discipline with modern technology, leveraging advanced data collection, analytics, and AI-driven insights to guide our decision-making and uncover emerging opportunities.</p>
+      <p>Mossback &amp; Co. represents a forward-looking approach to capital — rooted in sound judgment, enhanced by data, and built for the next generation of intelligent investing.</p>
+      <p>Contact: <a href="mailto:info@mossbackco.com">info@mossbackco.com</a></p>
+      <a href="#home" class="close" onclick="closeAbout(event)">Close</a>
+    </div>
+  </section>
+
+  <script>
+    function openAbout(e){ e && e.preventDefault(); document.body.classList.add('show-about'); }
+    function closeAbout(e){ e && e.preventDefault(); document.body.classList.remove('show-about'); }
+  </script>
+</body>
+</html>
