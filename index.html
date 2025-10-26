@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Mossback & Co.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,16 +13,30 @@
       --gray-bot:#e8e8e8;
       --about-bg:#0d1c2e;
       --about-fg:#eef2f7;
+      --safe-top: env(safe-area-inset-top);
+      --safe-right: env(safe-area-inset-right);
+      --safe-bottom: env(safe-area-inset-bottom);
+      --safe-left: env(safe-area-inset-left);
     }
     *{box-sizing:border-box}
-    html,body{height:100%;}
+    html,body{height:100%; margin:0; padding:0;}
     body{
-      margin:0;
       font-family:'Libre Baskerville', serif;
-      overflow:hidden;
+      overflow:hidden; /* prevent background scroll when panel slides */
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
     }
 
-    .panel{position:fixed; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;}
+    /* Panels */
+    .panel{
+      position:fixed; inset:0;
+      display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
+      padding: calc(20px + var(--safe-top)) calc(20px + var(--safe-right)) calc(20px + var(--safe-bottom)) calc(20px + var(--safe-left));
+      min-height: 100svh; /* iOS Safari small viewport height */
+    }
+    @supports (height: 100dvh){ .panel{ min-height: 100dvh; } }
+
     .home{
       background: linear-gradient(180deg, var(--gray-top) 0%, var(--gray-bot) 100%);
       z-index:1;
@@ -34,9 +48,10 @@
       z-index:2;
     }
 
-    body.show-about .about{ transform: translateY(0); transition: transform 620ms cubic-bezier(.22,.61,.36,1); }
+    body.show-about .about{ transform: translateY(0); transition: transform 520ms cubic-bezier(.22,.61,.36,1); }
     body.show-about .home{ filter: blur(2px); }
 
+    /* Heading — EXACT values you approved */
     h1 {
       font-family: 'Libre Baskerville', serif;
       font-size: 3.8rem;
@@ -46,34 +61,94 @@
       text-transform: uppercase;
       text-shadow: 0 1px 1px rgba(0,0,0,0.05);
       margin: 0 0 10px 0;
-      text-align: center;
     }
 
     .underline{
-      width:60%; max-width:340px; height:1.5px; background:linear-gradient(90deg,#a0a0a0 0%, #c5c5c5 100%); margin:10px auto 0; opacity:.6;
+      width:80%; max-width:340px; height:1.5px; background:linear-gradient(90deg,#a0a0a0 0%, #c5c5c5 100%); margin:10px auto 0; opacity:.6;
     }
 
-    .btn-link{ margin-top:22px; display:inline-block; padding:10px 16px; border:1px solid #bfc3c9; color:#1e1e1e; text-decoration:none; border-radius:8px; transition:background .2s,border-color .2s; }
+    /* Buttons: ensure 44px+ hit area */
+    .btn-link{
+      margin-top:32px;
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 20px; min-height:44px; min-width:44px;
+      border:1px solid #bfc3c9;
+      color:#1e1e1e;
+      text-decoration:none;
+      border-radius:10px;
+      transition:background .2s,border-color .2s, transform .06s;
+      user-select:none;
+    }
+    .btn-link:active{ transform: translateY(1px); }
     .btn-link:hover{ background:#f2f2f2; border-color:#9aa1ab; }
 
-    .about-inner{ max-width:900px; padding:48px 20px; text-align:center; }
-    .about h2{ margin:0 0 10px 0; font-weight:400; letter-spacing:.08em; text-transform:uppercase; }
-    .about .rule{ width:300px; height:1px; margin:0 auto 24px; background:linear-gradient(90deg,#9fb3c8 0%, #d7e0ea 100%); opacity:.7; }
-    .about p{ font-size:1.08rem; line-height:1.8; color: #e7ecf3; margin:0 0 16px 0; }
-    .about a{ color:#e7ecf3; }
-
-    .close{ margin-top:22px; display:inline-block; padding:10px 16px; border:1px solid #6e8aa6; color:#e7ecf3; text-decoration:none; border-radius:8px; transition:background .2s,border-color .2s; }
-    .close:hover{ background:#1a3553; border-color:#86a5c5; }
-
-    p.contact{
-      margin-top:30px;
-      font-size:1.1rem;
+    footer{
+      position:absolute; bottom: max(15px, var(--safe-bottom)); left:0; right:0;
+      width:100%;
+      text-align:center;
+      font-size:1rem;
       letter-spacing:0.03em;
       color:#1e1e1e;
-      text-align:center;
+      padding: 0 12px;
+    }
+    footer a{
+      color:#1e1e1e;
+      text-decoration:none;
+      border-bottom:1px solid #b5b5b5;
     }
 
-    @media (max-width:600px){ h1{font-size:2.6rem;} }
+    .about-inner{
+      width:min(900px, 92vw);
+      padding: clamp(24px, 6vw, 40px) 16px;
+      text-align:center;
+      margin:auto;
+    }
+    .about h2{
+      margin:0 0 10px 0;
+      font-weight:400;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .about .rule{
+      width:min(300px, 70vw);
+      height:1px;
+      margin:0 auto 24px;
+      background:linear-gradient(90deg,#9fb3c8 0%, #d7e0ea 100%);
+      opacity:.7;
+    }
+    .about p{
+      font-size: clamp(0.98rem, 2.8vw, 1.08rem);
+      line-height:1.75;
+      color: #e7ecf3;
+      margin:0 0 16px 0;
+    }
+    .about a{ color:#e7ecf3; }
+
+    .close{
+      margin-top:22px;
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 18px; min-height:44px; min-width:44px;
+      border:1px solid #6e8aa6;
+      color:#e7ecf3;
+      text-decoration:none;
+      border-radius:10px;
+      transition:background .2s,border-color .2s, transform .06s;
+      user-select:none;
+    }
+    .close:hover{ background:#1a3553; border-color:#86a5c5; }
+    .close:active{ transform: translateY(1px); }
+
+    /* Smaller iPhones */
+    @media (max-width:430px){
+      h1{ font-size: 2.6rem; }
+      .underline{ width:84%; max-width:280px; }
+      footer{ font-size: .95rem; }
+    }
+
+    /* Respect user motion preferences */
+    @media (prefers-reduced-motion: reduce){
+      body.show-about .about{ transition: none; }
+    }
   </style>
 </head>
 <body>
@@ -81,7 +156,9 @@
     <h1>Mossback &amp; Co.</h1>
     <div class="underline"></div>
     <a href="#about" class="btn-link" onclick="openAbout(event)">About Us</a>
-    <p class="contact">Contact: <a href='mailto:info@mossbackco.com' style='color:#1e1e1e;text-decoration:none;border-bottom:1px solid #b5b5b5;'>info@mossbackco.com</a></p>
+    <footer>
+      Contact: <a href='mailto:info@mossbackco.com'>info@mossbackco.com</a>
+    </footer>
   </section>
 
   <section class="panel about" id="about" aria-hidden="true">
