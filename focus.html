@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Focus | Mossback & Co.</title>
+    <meta name="description" content="Our investment focus spans real estate & infrastructure, private equity & roll-ups, and AI & automation.">
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Investment Focus | Mossback & Co.">
+    <meta property="og:description" content="Real estate, private equity, and technology-driven value creation.">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Investment Focus | Mossback & Co.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Libre Baskerville', serif;
+            background: linear-gradient(to bottom, #f4f4f4, #e8e8e8);
+            min-height: 100vh;
+        }
+
+        .heading-accent {
+            border-bottom: 1px solid rgba(58, 58, 58, 0.4);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 350ms ease, transform 350ms ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .btn-primary {
+            background: #3A3A3A;
+            color: white;
+            transition: all 250ms ease;
+        }
+
+        .btn-primary:hover {
+            background: #2C3E50;
+            transform: translateY(-2px);
+        }
+
+        .nav-link {
+            transition: color 200ms ease;
+        }
+
+        .nav-link:hover {
+            color: #2C3E50;
+        }
+
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 350ms ease;
+        }
+
+        .mobile-menu.open {
+            max-height: 400px;
+        }
+
+        .focus-card {
+            transition: all 300ms ease;
+        }
+
+        .focus-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Header -->
+    <header class="sticky top-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl tracking-widest font-bold text-gray-900">
+                        MOSSBACK & CO.
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="about.html" class="nav-link text-sm tracking-wide uppercase">About</a>
+                    <a href="focus.html" class="nav-link text-sm tracking-wide uppercase">Focus</a>
+                    <a href="technology.html" class="nav-link text-sm tracking-wide uppercase">Technology</a>
+                    <a href="insights.html" class="nav-link text-sm tracking-wide uppercase">Insights</a>
+                    <a href="contact.html" class="btn-primary px-6 py-2.5 rounded text-sm tracking-wide uppercase">Connect</a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Toggle menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t">
+                <div class="px-4 py-4 space-y-3">
+                    <a href="about.html" class="block py-2 text-sm tracking-wide uppercase hover:text-gray-600">About</a>
+                    <a href="focus.html" class="block py-2 text-sm tracking-wide uppercase hover:text-gray-600">Focus</a>
+                    <a href="technology.html" class="block py-2 text-sm tracking-wide uppercase hover:text-gray-600">Technology</a>
+                    <a href="insights.html" class="block py-2 text-sm tracking-wide uppercase hover:text-gray-600">Insights</a>
+                    <a href="contact.html" class="block py-2 text-sm tracking-wide uppercase hover:text-gray-600">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="py-20 sm:py-32">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center fade-in">
+                    <h1 class="text-4xl sm:text-5xl tracking-widest uppercase mb-6 text-gray-900 heading-accent">
+                        Investment Focus
+                    </h1>
+                    <p class="text-lg text-gray-600 mt-8 leading-relaxed">
+                        We deploy capital across three complementary areas, each enhanced by data and technology.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Real Estate & Infrastructure -->
+        <section class="py-16 bg-white/50">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="focus-card bg-white rounded-2xl p-8 sm:p-12 shadow-lg fade-in">
+                    <div class="flex items-center mb-6">
+                        <div class="h-16 w-16 bg-gray-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-10 h-10 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-3xl tracking-wide uppercase text-gray-900">
+                            Real Estate & Infrastructure
+                        </h2>
+                    </div>
+
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Institutional underwriting. Geographic edge. Durable cash flows.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl tracking-wide uppercase mb-3 text-gray-900">Focus on Texas & Sun Belt</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                We concentrate investments in markets we know deeply. Texas and the Sun Belt offer population growth, business migration, and infrastructure gaps that create opportunity. Our geographic focus gives us sourcing advantages and local intelligence that national players miss.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl tracking-wide uppercase mb-3 text-gray-900">Underwriting Discipline</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Every deal undergoes rigorous financial analysis and scenario modeling. We stress test assumptions across interest rate environments, occupancy levels, and economic cycles. Our models incorporate property-level cash flows, market comparables, and risk-adjusted returns. We only move forward when the numbers work.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl tracking-wide uppercase mb-3 text-gray-900">Asset Classes</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <span class="text-gray-900 mr-2">•</span>
+                                    <span>Multifamily properties with value-add potential</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-gray-900 mr-2">•</span>
+                                    <span>Industrial and logistics facilities</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-gray-900 mr-2">•</span>
+                                    <span>Infrastructure projects with contracted revenue</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-gray-900 mr-2">•</span>
+                                    <span>Land development in high-growth corridors</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Private Equity & Roll-Ups -->
+        <section class="py-16">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="focus-card bg-white rounded-2xl p-8 sm:p-12 shadow-lg fade-in">
+                    <div class="flex items-center mb-6">
+                        <div class="h-16 w-16 bg-gray-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-10 h-10 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-3xl tracking-wide uppercase text-gray-900">
+                            Private Equity & Roll-Ups
+                        </h2>
+                    </div>
+
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Operational excellence and tech-enabled integration.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl tracking-wide uppercase mb-3 text-gray-900">Silver Tsunami Opportunities</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Millions of baby boomers own profitable small businesses with no succession plan. These companies have customers, cash flow, and proven business models—but lack institutional infrastructure. We acquire founder-led businesses and professionalize operations while preserving what works.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl tracking-wide uppercase mb-3 text-gray-900">Integration Playbooks</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Consolidation only creates value if executed well. We've built detailed playbooks for integrating acquisitions: standardizing back-office functions, implementing KPI dashboards, centralizing procurement, and cross-selling services. Technology accelerates integration—CRM systems, accounting automation, and operational analytics turn fragmented businesses into scalable platforms.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl tracking-wide uppercase mb-3 text-gray-900">Target Sectors</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <span class="text-gray-900 mr-2">•</span>
+                                    <span>Essential services with recurring revenue</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-gray-900 mr-2">•</span>
+                                    <span>B2B services with high customer retention</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-gray-900 mr-2">•</span>
+                                    <span>Regional businesses ready for multi-market expansion</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-gray-900 mr-2">•</span>
+                                    <span>Industries ripe for technology-driven consolidation</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI & Automation -->
+        <section class="py-16 bg-white/50">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="focus-card bg-white rounded-2xl p-8 sm:p-12 shadow-lg fade-in">
+                    <div class="flex items-center mb-6">
+                        <div class="h-16 w-16 bg-gray-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-10 h-10 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-3xl tracking-wide uppercase text-gray-900">
+                            AI & Automation
+                        </h2>
+                    </div>
+
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Proprietary analytics for sourcing, diligence, and operations.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl tracking-wide uppercase mb-3 text-gray-900">Deal Sourcing & Market Intelligence</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                We build custom tools to monitor markets, identify off-market opportunities, and track competitor activity. Web scraping, public records analysis, and pattern recognition help us find deals before they hit the market. Our systems surface opportunities that manual processes would miss.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl tracking-wide uppercase mb-3 text-gray-900">Due Diligence Acceleration</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                AI speeds up due diligence without sacrificing quality. We use machine learning for document review, financial analysis automation, and risk flagging. Natural language processing extracts key terms from leases and contracts. Computer vision analyzes property condition from drone footage and satellite imagery. What used to take weeks now takes days.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl tracking-wide uppercase mb-3 text-gray-900">Operational Optimization</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Once we own an asset, technology drives performance. For real estate: predictive maintenance reduces downtime, automated lease administration cuts overhead, and dynamic pricing maximizes revenue. For operating businesses: workflow automation frees up staff, data dashboards surface inefficiencies, and forecasting models improve capital allocation.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl tracking-wide uppercase mb-3 text-gray-900">Build vs. Buy</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                We're pragmatic about technology. Off-the-shelf solutions work for most problems. But where competitive advantage matters—deal sourcing, custom analytics, proprietary workflows—we build in-house. Our team includes developers, data scientists, and domain experts who can turn investment insights into production code.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+                <h2 class="text-2xl tracking-wide uppercase mb-6 text-gray-900">
+                    Have an Opportunity?
+                </h2>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    We're always looking for exceptional deals and partnership opportunities. Let's talk.
+                </p>
+                <a href="contact.html" class="btn-primary px-8 py-3.5 rounded text-sm tracking-wide uppercase inline-block">
+                    Get in Touch
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl tracking-widest uppercase mb-4">Mossback & Co.</h3>
+                    <p class="text-gray-400 text-sm mb-2">Texas, USA</p>
+                    <p class="text-gray-400 text-sm">contact@mossback.co</p>
+                </div>
+
+                <div>
+                    <h4 class="text-sm tracking-widest uppercase mb-4">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white text-sm transition-colors">About</a></li>
+                        <li><a href="focus.html" class="text-gray-400 hover:text-white text-sm transition-colors">Focus</a></li>
+                        <li><a href="technology.html" class="text-gray-400 hover:text-white text-sm transition-colors">Technology</a></li>
+                        <li><a href="insights.html" class="text-gray-400 hover:text-white text-sm transition-colors">Insights</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white text-sm transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm tracking-widest uppercase mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Mossback & Co. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('open');
+            mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.fade-in').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    el.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

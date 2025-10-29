@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology | Mossback & Co.</title>
+    <meta name="description" content="Technology is embedded across the lifecycle: sourcing → diligence → operations.">
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Technology | Mossback & Co.">
+    <meta property="og:description" content="Data, models, automation, and visualization drive our investment process.">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Technology | Mossback & Co.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Libre Baskerville', serif;
+            background: linear-gradient(to bottom, #f4f4f4, #e8e8e8);
+            min-height: 100vh;
+        }
+
+        .heading-accent {
+            border-bottom: 1px solid rgba(58, 58, 58, 0.4);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 350ms ease, transform 350ms ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .btn-primary {
+            background: #3A3A3A;
+            color: white;
+            transition: all 250ms ease;
+        }
+
+        .btn-primary:hover {
+            background: #2C3E50;
+            transform: translateY(-2px);
+        }
+
+        .nav-link {
+            transition: color 200ms ease;
+        }
+
+        .nav-link:hover {
+            color: #2C3E50;
+        }
+
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 350ms ease;
+        }
+
+        .mobile-menu.open {
+            max-height: 400px;
+        }
+
+        .stack-layer {
+            transition: all 300ms ease;
+        }
+
+        .stack-layer:hover {
+            transform: translateX(8px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Header -->
+    <header class="sticky top-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl tracking-widest font-bold text-gray-900">
+                        MOSSBACK & CO.
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="about.html" class="nav-link text-sm tracking-wide uppercase">About</a>
+                    <a href="focus.html" class="nav-link text-sm tracking-wide uppercase">Focus</a>
+                    <a href="technology.html" class="nav-link text-sm tracking-wide uppercase">Technology</a>
+                    <a href="insights.html" class="nav-link text-sm tracking-wide uppercase">Insights</a>
+                    <a href="contact.html" class="btn-primary px-6 py-2.5 rounded text-sm tracking-wide uppercase">Connect</a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Toggle menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t">
+                <div class="px-4 py-4 space-y-3">
+                    <a href="about.html" class="block py-2 text-sm tracking-wide uppercase hover:text-gray-600">About</a>
+                    <a href="focus.html" class="block py-2 text-sm tracking-wide uppercase hover:text-gray-600">Focus</a>
+                    <a href="technology.html" class="block py-2 text-sm tracking-wide uppercase hover:text-gray-600">Technology</a>
+                    <a href="insights.html" class="block py-2 text-sm tracking-wide uppercase hover:text-gray-600">Insights</a>
+                    <a href="contact.html" class="block py-2 text-sm tracking-wide uppercase hover:text-gray-600">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="py-20 sm:py-32">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center fade-in">
+                    <h1 class="text-4xl sm:text-5xl tracking-widest uppercase mb-6 text-gray-900 heading-accent">
+                        Technology
+                    </h1>
+                    <p class="text-lg text-gray-600 mt-8 leading-relaxed">
+                        Technology is embedded across the lifecycle: sourcing → diligence → operations.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Visual -->
+        <section class="py-16 bg-white/50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl tracking-widest uppercase mb-12 text-center heading-accent mx-auto fade-in">
+                    Our Technology Stack
+                </h2>
+
+                <div class="space-y-4 fade-in">
+                    <!-- Layer 1: Data -->
+                    <div class="stack-layer bg-white rounded-xl p-6 shadow-lg border-l-4 border-gray-900">
+                        <div class="flex items-center mb-3">
+                            <svg class="w-8 h-8 text-gray-700 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
+                            </svg>
+                            <h3 class="text-2xl tracking-wide uppercase text-gray-900">Data</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            Public records, market data, proprietary datasets. We aggregate information from multiple sources to build comprehensive market intelligence and identify opportunities before they're widely known.
+                        </p>
+                    </div>
+
+                    <!-- Layer 2: Models -->
+                    <div class="stack-layer bg-white rounded-xl p-6 shadow-lg border-l-4 border-gray-700">
+                        <div class="flex items-center mb-3">
+                            <svg class="w-8 h-8 text-gray-700 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                            </svg>
+                            <h3 class="text-2xl tracking-wide uppercase text-gray-900">Models</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            Valuation engines, risk assessment, pattern recognition. Machine learning models process raw data to surface insights—from property valuations to acquisition target clustering to market trend forecasting.
+                        </p>
+                    </div>
+
+                    <!-- Layer 3: Automation -->
+                    <div class="stack-layer bg-white rounded-xl p-6 shadow-lg border-l-4 border-gray-600">
+                        <div class="flex items-center mb-3">
+                            <svg class="w-8 h-8 text-gray-700 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <h3 class="text-2xl tracking-wide uppercase text-gray-900">Automation</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            Workflow orchestration, alerts, document processing. Automated systems handle routine tasks—deal monitoring, due diligence checklists, document extraction, and operational reporting—freeing our team to focus on judgment and strategy.
+                        </p>
+                    </div>
+
+                    <!-- Layer 4: Visualization -->
+                    <div class="stack-layer bg-white rounded-xl p-6 shadow-lg border-l-4 border-gray-500">
+                        <div class="flex items-center mb-3">
+                            <svg class="w-8 h-8 text-gray-700 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                            </svg>
+                            <h3 class="text-2xl tracking-wide uppercase text-gray-900">Visualization</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            Dashboards, reporting, performance tracking. Clean, actionable interfaces display portfolio performance, deal pipelines, and operational metrics. We design dashboards that make complex data accessible and drive better decisions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lifecycle Integration -->
+        <section class="py-16">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl tracking-widest uppercase mb-12 text-center heading-accent mx-auto fade-in">
+                    Technology Across the Lifecycle
+                </h2>
+
+                <div class="bg-white rounded-2xl p-8 sm:p-12 shadow-lg fade-in">
+                    <div class="space-y-8">
+                        <!-- Sourcing -->
+                        <div class="border-b border-gray-200 pb-8">
+                            <h3 class="text-2xl tracking-wide uppercase mb-4 text-gray-900">1. Sourcing</h3>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                We monitor thousands of properties, businesses, and data points daily. Custom scrapers track listings, public filings, and transaction records. Machine learning flags opportunities matching our investment criteria. Automated alerts notify us the moment something interesting appears.
+                            </p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <span class="text-gray-900 mr-2">•</span>
+                                    <span>Web scraping and data aggregation</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-gray-900 mr-2">•</span>
+                                    <span>Pattern matching and opportunity scoring</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-gray-900 mr-2">•</span>
+                                    <span>Real-time alerts and deal flow monitoring</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Diligence -->
+                        <div class="border-b border-gray-200 pb-8">
+                            <h3 class="text-2xl tracking-wide uppercase mb-4 text-gray-900">2. Diligence</h3>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                Once we identify a target, automation accelerates analysis. Financial models pull data directly from property management systems and accounting software. AI reviews lease agreements, contracts, and environmental reports. Computer vision analyzes property condition. We can run comprehensive diligence in a fraction of traditional timelines.
+                            </p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <span class="text-gray-900 mr-2">•</span>
+                                    <span>Automated financial analysis and modeling</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-gray-900 mr-2">•</span>
+                                    <span>Document extraction and contract review</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-gray-900 mr-2">•</span>
+                                    <span>Property condition assessment via computer vision</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Operations -->
+                        <div>
+                            <h3 class="text-2xl tracking-wide uppercase mb-4 text-gray-900">3. Operations</h3>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                Post-acquisition, technology drives performance improvement. For real estate: automated rent collection, predictive maintenance scheduling, and dynamic pricing. For businesses: workflow automation, centralized reporting, and performance dashboards. Our portfolio companies inherit our technology infrastructure immediately.
+                            </p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <span class="text-gray-900 mr-2">•</span>
+                                    <span>Automated operations and maintenance</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-gray-900 mr-2">•</span>
+                                    <span>KPI dashboards and performance tracking</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-gray-900 mr-2">•</span>
+                                    <span>Predictive analytics and optimization</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy -->
+        <section class="py-16 bg-white/50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-2xl p-8 shadow-lg fade-in">
+                    <h2 class="text-2xl tracking-wide uppercase mb-4 text-gray-900">Our Approach</h2>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        We're pragmatic about technology. It's a tool, not a religion. Off-the-shelf software works for most problems. But where competitive advantage matters—proprietary deal sourcing, custom analytics, unique workflows—we build in-house.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Our team includes developers, data scientists, and domain experts who can turn investment insights into production code. We move fast, iterate constantly, and measure results. Technology serves strategy, not the other way around.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl tracking-widest uppercase mb-4">Mossback & Co.</h3>
+                    <p class="text-gray-400 text-sm mb-2">Texas, USA</p>
+                    <p class="text-gray-400 text-sm">contact@mossback.co</p>
+                </div>
+
+                <div>
+                    <h4 class="text-sm tracking-widest uppercase mb-4">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white text-sm transition-colors">About</a></li>
+                        <li><a href="focus.html" class="text-gray-400 hover:text-white text-sm transition-colors">Focus</a></li>
+                        <li><a href="technology.html" class="text-gray-400 hover:text-white text-sm transition-colors">Technology</a></li>
+                        <li><a href="insights.html" class="text-gray-400 hover:text-white text-sm transition-colors">Insights</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white text-sm transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm tracking-widest uppercase mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Mossback & Co. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('open');
+            mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.fade-in').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    el.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

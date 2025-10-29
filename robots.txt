@@ -1,0 +1,8 @@
+# Robots.txt for Mossback & Co.
+# https://asherhoodis.github.io/mossbackco/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://asherhoodis.github.io/mossbackco/sitemap.xml
