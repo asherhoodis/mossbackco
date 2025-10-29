@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Mossback & Co.</title>
+    <meta name="description" content="We invest with discipline and design systems that compound. Learn about our mission, philosophy, and values.">
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content="About | Mossback & Co.">
+    <meta property="og:description" content="We invest with discipline and design systems that compound.">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="About | Mossback & Co.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Libre Baskerville', serif;
+            background: linear-gradient(to bottom, #f4f4f4, #e8e8e8);
+            min-height: 100vh;
+        }
+
+        .heading-accent {
+            border-bottom: 1px solid rgba(58, 58, 58, 0.4);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 350ms ease, transform 350ms ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .btn-primary {
+            background: #3A3A3A;
+            color: white;
+            transition: all 250ms ease;
+        }
+
+        .btn-primary:hover {
+            background: #2C3E50;
+            transform: translateY(-2px);
+        }
+
+        .nav-link {
+            transition: color 200ms ease;
+        }
+
+        .nav-link:hover {
+            color: #2C3E50;
+        }
+
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 350ms ease;
+        }
+
+        .mobile-menu.open {
+            max-height: 400px;
+        }
+
+        .value-item {
+            border-left: 3px solid #3A3A3A;
+            transition: border-color 250ms ease;
+        }
+
+        .value-item:hover {
+            border-left-color: #2C3E50;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Header -->
+    <header class="sticky top-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl tracking-widest font-bold text-gray-900">
+                        MOSSBACK & CO.
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="about.html" class="nav-link text-sm tracking-wide uppercase">About</a>
+                    <a href="focus.html" class="nav-link text-sm tracking-wide uppercase">Focus</a>
+                    <a href="technology.html" class="nav-link text-sm tracking-wide uppercase">Technology</a>
+                    <a href="insights.html" class="nav-link text-sm tracking-wide uppercase">Insights</a>
+                    <a href="contact.html" class="btn-primary px-6 py-2.5 rounded text-sm tracking-wide uppercase">Connect</a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Toggle menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t">
+                <div class="px-4 py-4 space-y-3">
+                    <a href="about.html" class="block py-2 text-sm tracking-wide uppercase hover:text-gray-600">About</a>
+                    <a href="focus.html" class="block py-2 text-sm tracking-wide uppercase hover:text-gray-600">Focus</a>
+                    <a href="technology.html" class="block py-2 text-sm tracking-wide uppercase hover:text-gray-600">Technology</a>
+                    <a href="insights.html" class="block py-2 text-sm tracking-wide uppercase hover:text-gray-600">Insights</a>
+                    <a href="contact.html" class="block py-2 text-sm tracking-wide uppercase hover:text-gray-600">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="py-20 sm:py-32">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center fade-in">
+                    <h1 class="text-4xl sm:text-5xl tracking-widest uppercase mb-8 text-gray-900 heading-accent">
+                        About Us
+                    </h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="py-16 bg-white/50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="fade-in text-center">
+                    <h2 class="text-2xl sm:text-3xl tracking-wide uppercase mb-6 text-gray-900">
+                        Our Mission
+                    </h2>
+                    <p class="text-xl sm:text-2xl text-gray-700 leading-relaxed mb-4">
+                        We invest with discipline and design systems that compound.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Mossback & Co. is a Texas-based investment firm focused on real estate, private equity, and technology-driven value creation.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section class="py-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl tracking-widest uppercase mb-12 text-center heading-accent mx-auto fade-in">
+                    Philosophy
+                </h2>
+
+                <div class="space-y-8 fade-in">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <h3 class="text-xl tracking-wide uppercase mb-4 text-gray-900">Grounded in Reality</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            We believe the best investments are rooted in tangible assets and real cash flows. Real estate and operating businesses provide the foundation for durable wealth creation. We pursue opportunities where we can underwrite value with precision and manage risk with discipline.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <h3 class="text-xl tracking-wide uppercase mb-4 text-gray-900">Enhanced by Technology</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Technology is not a distraction—it's a force multiplier. We build proprietary tools for sourcing, analysis, and operations. AI and automation allow us to process more data, identify better opportunities, and execute with greater efficiency. But technology serves strategy, not the other way around.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <h3 class="text-xl tracking-wide uppercase mb-4 text-gray-900">Built for the Long Term</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            We're not chasing quick flips or trends. Our focus is on building positions we can hold, improve, and scale over time. We measure success in years and decades, not quarters. Compounding requires patience, and patience requires conviction.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="py-16 bg-white/50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl tracking-widest uppercase mb-12 text-center heading-accent mx-auto fade-in">
+                    Our Values
+                </h2>
+
+                <div class="grid sm:grid-cols-2 gap-6 fade-in">
+                    <div class="value-item bg-white rounded-lg p-6 pl-6 shadow">
+                        <h3 class="text-lg tracking-wide uppercase mb-2 text-gray-900">Rigor Over Speed</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            We take the time to understand what we're buying. Good deals don't require shortcuts.
+                        </p>
+                    </div>
+
+                    <div class="value-item bg-white rounded-lg p-6 pl-6 shadow">
+                        <h3 class="text-lg tracking-wide uppercase mb-2 text-gray-900">Systematize What Works</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Repeatable processes create leverage. We codify best practices into tools and workflows.
+                        </p>
+                    </div>
+
+                    <div class="value-item bg-white rounded-lg p-6 pl-6 shadow">
+                        <h3 class="text-lg tracking-wide uppercase mb-2 text-gray-900">Align Incentives</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Partnerships succeed when everyone wins. We structure deals with transparency and fairness.
+                        </p>
+                    </div>
+
+                    <div class="value-item bg-white rounded-lg p-6 pl-6 shadow">
+                        <h3 class="text-lg tracking-wide uppercase mb-2 text-gray-900">Measure, Refine, Repeat</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Continuous improvement is our advantage. We track performance and adapt quickly.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+                <h2 class="text-2xl tracking-wide uppercase mb-6 text-gray-900">
+                    Let's Build Together
+                </h2>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    Whether you're a potential partner, investor, or just curious about our approach, we'd like to hear from you.
+                </p>
+                <a href="contact.html" class="btn-primary px-8 py-3.5 rounded text-sm tracking-wide uppercase inline-block">
+                    Get in Touch
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl tracking-widest uppercase mb-4">Mossback & Co.</h3>
+                    <p class="text-gray-400 text-sm mb-2">Texas, USA</p>
+                    <p class="text-gray-400 text-sm">contact@mossback.co</p>
+                </div>
+
+                <div>
+                    <h4 class="text-sm tracking-widest uppercase mb-4">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white text-sm transition-colors">About</a></li>
+                        <li><a href="focus.html" class="text-gray-400 hover:text-white text-sm transition-colors">Focus</a></li>
+                        <li><a href="technology.html" class="text-gray-400 hover:text-white text-sm transition-colors">Technology</a></li>
+                        <li><a href="insights.html" class="text-gray-400 hover:text-white text-sm transition-colors">Insights</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white text-sm transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm tracking-widest uppercase mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Mossback & Co. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('open');
+            mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.fade-in').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    el.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

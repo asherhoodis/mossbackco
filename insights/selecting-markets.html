@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting Markets with Data: A Practical Playbook | Mossback & Co.</title>
+    <meta name="description" content="Our framework for analyzing demographics, employment trends, and supply constraints to identify where to deploy capital.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Libre Baskerville', serif;
+            background: linear-gradient(to bottom, #f4f4f4, #e8e8e8);
+            min-height: 100vh;
+        }
+
+        .btn-primary {
+            background: #3A3A3A;
+            color: white;
+            transition: all 250ms ease;
+        }
+
+        .btn-primary:hover {
+            background: #2C3E50;
+            transform: translateY(-2px);
+        }
+
+        .nav-link {
+            transition: color 200ms ease;
+        }
+
+        .nav-link:hover {
+            color: #2C3E50;
+        }
+
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 350ms ease;
+        }
+
+        .mobile-menu.open {
+            max-height: 400px;
+        }
+
+        article p {
+            margin-bottom: 1.5rem;
+        }
+
+        article h2 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Header -->
+    <header class="sticky top-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="../index.html" class="text-2xl tracking-widest font-bold text-gray-900">
+                        MOSSBACK & CO.
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../about.html" class="nav-link text-sm tracking-wide uppercase">About</a>
+                    <a href="../focus.html" class="nav-link text-sm tracking-wide uppercase">Focus</a>
+                    <a href="../technology.html" class="nav-link text-sm tracking-wide uppercase">Technology</a>
+                    <a href="../insights.html" class="nav-link text-sm tracking-wide uppercase">Insights</a>
+                    <a href="../contact.html" class="btn-primary px-6 py-2.5 rounded text-sm tracking-wide uppercase">Connect</a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Toggle menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t">
+                <div class="px-4 py-4 space-y-3">
+                    <a href="../about.html" class="block py-2 text-sm tracking-wide uppercase">About</a>
+                    <a href="../focus.html" class="block py-2 text-sm tracking-wide uppercase">Focus</a>
+                    <a href="../technology.html" class="block py-2 text-sm tracking-wide uppercase">Technology</a>
+                    <a href="../insights.html" class="block py-2 text-sm tracking-wide uppercase">Insights</a>
+                    <a href="../contact.html" class="block py-2 text-sm tracking-wide uppercase">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <article class="py-20">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Back Link -->
+                <a href="../insights.html" class="text-sm tracking-wide uppercase text-gray-600 hover:text-gray-900 mb-8 inline-block">
+                    ← Back to Insights
+                </a>
+
+                <!-- Article Header -->
+                <header class="mb-12">
+                    <div class="text-sm tracking-widest uppercase text-gray-500 mb-4">
+                        January 8, 2025
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl tracking-wide uppercase mb-6 text-gray-900 leading-tight">
+                        Selecting Markets with Data: A Practical Playbook
+                    </h1>
+                    <p class="text-xl text-gray-600 leading-relaxed">
+                        Market selection can make or break a real estate investment. We share our framework for analyzing demographics, employment trends, and supply constraints—using data, not intuition—to identify where to deploy capital.
+                    </p>
+                </header>
+
+                <!-- Article Content -->
+                <div class="bg-white rounded-2xl p-8 sm:p-12 shadow-lg">
+                    <div class="prose prose-lg max-w-none text-gray-600 leading-relaxed">
+                        <p>
+                            Location matters more than any other variable in real estate. You can fix a bad building. You can't fix a bad market.
+                        </p>
+
+                        <p>
+                            Most investors pick markets based on familiarity or anecdote. "Austin is hot." "Phoenix has growth." True statements, but incomplete analysis. We need a systematic framework that combines quantitative rigor with qualitative judgment.
+                        </p>
+
+                        <h2 class="text-2xl tracking-wide uppercase text-gray-900">The Framework: Four Layers of Analysis</h2>
+
+                        <p>
+                            Our market selection process evaluates four key dimensions: demographics, employment, supply/demand dynamics, and risk factors. Each layer builds on the previous one to create a comprehensive market profile.
+                        </p>
+
+                        <h2 class="text-2xl tracking-wide uppercase text-gray-900">Layer 1: Demographics — Who's Moving and Why</h2>
+
+                        <p>
+                            Population growth is the foundation. We track net migration patterns, age cohorts, household formation rates, and income distribution. The best markets have:
+                        </p>
+
+                        <ul class="space-y-2 text-gray-600 mb-6">
+                            <li>• Consistent net in-migration (people voting with their feet)</li>
+                            <li>• Growing millennial and Gen Z populations (future renters and buyers)</li>
+                            <li>• Rising median household income (ability to pay rent)</li>
+                            <li>• Diverse population growth across income levels (not just high earners)</li>
+                        </ul>
+
+                        <p>
+                            Data sources: US Census Bureau, IRS migration data, local planning departments, and proprietary datasets tracking U-Haul rental rates and cell phone pings.
+                        </p>
+
+                        <h2 class="text-2xl tracking-wide uppercase text-gray-900">Layer 2: Employment — What Pays the Rent</h2>
+
+                        <p>
+                            Jobs create housing demand. We analyze employment growth rates, industry diversification, wage trends, and major employer stability. Red flags include:
+                        </p>
+
+                        <ul class="space-y-2 text-gray-600 mb-6">
+                            <li>• Single-industry dependence (oil towns, manufacturing hubs)</li>
+                            <li>• Declining labor force participation</li>
+                            <li>• Stagnant wage growth despite job gains</li>
+                            <li>• High concentration in cyclical sectors</li>
+                        </ul>
+
+                        <p>
+                            We look for markets with balanced growth across multiple industries—technology, healthcare, logistics, professional services—that provide resilience through economic cycles.
+                        </p>
+
+                        <h2 class="text-2xl tracking-wide uppercase text-gray-900">Layer 3: Supply and Demand — The Fundamental Equation</h2>
+
+                        <p>
+                            This is where most investors stop their analysis. Big mistake. Supply/demand is lagging, not leading. By the time you see tight occupancy and rising rents, institutional capital has already flooded in.
+                        </p>
+
+                        <p>
+                            Instead, we model forward-looking supply constraints:
+                        </p>
+
+                        <ul class="space-y-2 text-gray-600 mb-6">
+                            <li>• Entitled land availability (what can actually be built)</li>
+                            <li>• Permitting timelines and regulatory environment</li>
+                            <li>• Construction cost trends (can developers pencil new projects?)</li>
+                            <li>• Infrastructure capacity (water, roads, utilities)</li>
+                        </ul>
+
+                        <p>
+                            The best opportunities exist where demand is accelerating but supply is constrained by geography, regulation, or development economics.
+                        </p>
+
+                        <h2 class="text-2xl tracking-wide uppercase text-gray-900">Layer 4: Risk Factors — What Could Go Wrong</h2>
+
+                        <p>
+                            Every market has risks. The goal isn't to avoid all risk—it's to understand and price it correctly. We assess:
+                        </p>
+
+                        <ul class="space-y-2 text-gray-600 mb-6">
+                            <li>• Natural disaster exposure (hurricanes, earthquakes, floods)</li>
+                            <li>• Regulatory risk (rent control, zoning changes, tax policy)</li>
+                            <li>• Infrastructure stress (water scarcity, traffic congestion)</li>
+                            <li>• Political and fiscal health (pension obligations, budget deficits)</li>
+                        </ul>
+
+                        <p>
+                            Some risks are manageable through property selection and insurance. Others—like California's regulatory environment—fundamentally change the investment thesis.
+                        </p>
+
+                        <h2 class="text-2xl tracking-wide uppercase text-gray-900">Putting It Into Practice: Texas as a Case Study</h2>
+
+                        <p>
+                            Why do we focus on Texas? Not because it's trendy, but because it checks all four boxes:
+                        </p>
+
+                        <p>
+                            <strong>Demographics:</strong> Leading the nation in net migration, particularly from high-cost states. Growing across all age cohorts and income levels.
+                        </p>
+
+                        <p>
+                            <strong>Employment:</strong> Diversified economy spanning energy, tech, healthcare, logistics, and manufacturing. Major corporate relocations provide high-wage job growth.
+                        </p>
+
+                        <p>
+                            <strong>Supply/Demand:</strong> While construction is active, demand continues to outpace supply in key submarkets. Land constraints in core urban areas create long-term supply discipline.
+                        </p>
+
+                        <p>
+                            <strong>Risk Profile:</strong> Business-friendly regulatory environment, no state income tax, manageable natural disaster risk outside coastal areas. Infrastructure investments keeping pace with growth.
+                        </p>
+
+                        <p>
+                            This doesn't mean every Texas deal is good. But it means the macro tailwinds support property-level execution.
+                        </p>
+
+                        <h2 class="text-2xl tracking-wide uppercase text-gray-900">Conclusion: Data Informs, Judgment Decides</h2>
+
+                        <p>
+                            No amount of data can guarantee success. Markets are dynamic, and conditions change. But systematic analysis reduces the likelihood of catastrophic mistakes.
+                        </p>
+
+                        <p>
+                            The investors who win long-term are those who:
+                        </p>
+
+                        <ul class="space-y-2 text-gray-600 mb-6">
+                            <li>• Update their market models continuously</li>
+                            <li>• Follow leading indicators, not lagging ones</li>
+                            <li>• Understand the "why" behind the data</li>
+                            <li>• Have conviction to act when analysis supports it</li>
+                        </ul>
+
+                        <p>
+                            At Mossback & Co., we treat market selection as infrastructure, not instinct. It compounds over time.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="mt-12 text-center">
+                    <p class="text-gray-600 mb-6">
+                        Interested in discussing market opportunities? Let's connect.
+                    </p>
+                    <a href="../contact.html" class="btn-primary px-8 py-3.5 rounded text-sm tracking-wide uppercase inline-block">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Mossback & Co. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

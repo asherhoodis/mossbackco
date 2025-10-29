@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights | Mossback & Co.</title>
+    <meta name="description" content="Thoughts on investing, technology, and building durable value.">
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Insights | Mossback & Co.">
+    <meta property="og:description" content="Thoughts on investing, technology, and building durable value.">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Insights | Mossback & Co.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Libre Baskerville', serif;
+            background: linear-gradient(to bottom, #f4f4f4, #e8e8e8);
+            min-height: 100vh;
+        }
+
+        .heading-accent {
+            border-bottom: 1px solid rgba(58, 58, 58, 0.4);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 350ms ease, transform 350ms ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .btn-primary {
+            background: #3A3A3A;
+            color: white;
+            transition: all 250ms ease;
+        }
+
+        .btn-primary:hover {
+            background: #2C3E50;
+            transform: translateY(-2px);
+        }
+
+        .nav-link {
+            transition: color 200ms ease;
+        }
+
+        .nav-link:hover {
+            color: #2C3E50;
+        }
+
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 350ms ease;
+        }
+
+        .mobile-menu.open {
+            max-height: 400px;
+        }
+
+        .article-card {
+            transition: all 300ms ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Header -->
+    <header class="sticky top-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl tracking-widest font-bold text-gray-900">
+                        MOSSBACK & CO.
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="about.html" class="nav-link text-sm tracking-wide uppercase">About</a>
+                    <a href="focus.html" class="nav-link text-sm tracking-wide uppercase">Focus</a>
+                    <a href="technology.html" class="nav-link text-sm tracking-wide uppercase">Technology</a>
+                    <a href="insights.html" class="nav-link text-sm tracking-wide uppercase">Insights</a>
+                    <a href="contact.html" class="btn-primary px-6 py-2.5 rounded text-sm tracking-wide uppercase">Connect</a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Toggle menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t">
+                <div class="px-4 py-4 space-y-3">
+                    <a href="about.html" class="block py-2 text-sm tracking-wide uppercase hover:text-gray-600">About</a>
+                    <a href="focus.html" class="block py-2 text-sm tracking-wide uppercase hover:text-gray-600">Focus</a>
+                    <a href="technology.html" class="block py-2 text-sm tracking-wide uppercase hover:text-gray-600">Technology</a>
+                    <a href="insights.html" class="block py-2 text-sm tracking-wide uppercase hover:text-gray-600">Insights</a>
+                    <a href="contact.html" class="block py-2 text-sm tracking-wide uppercase hover:text-gray-600">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="py-20 sm:py-32">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center fade-in">
+                    <h1 class="text-4xl sm:text-5xl tracking-widest uppercase mb-6 text-gray-900 heading-accent">
+                        Insights
+                    </h1>
+                    <p class="text-lg text-gray-600 mt-8 leading-relaxed">
+                        Thoughts on investing, technology, and building durable value.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles Grid -->
+        <section class="py-16">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Article 1 -->
+                    <article class="article-card bg-white rounded-2xl p-8 shadow-lg fade-in">
+                        <div class="text-sm tracking-widest uppercase text-gray-500 mb-4">
+                            January 15, 2025
+                        </div>
+                        <h2 class="text-2xl tracking-wide uppercase mb-4 text-gray-900">
+                            <a href="insights/ai-private-equity.html" class="hover:text-gray-600 transition-colors">
+                                How AI Is Reshaping Private Equity
+                            </a>
+                        </h2>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Artificial intelligence is transforming how firms source deals, conduct diligence, and optimize operations. We examine the practical applications delivering real returns today—and separate hype from reality.
+                        </p>
+                        <a href="insights/ai-private-equity.html" class="text-sm tracking-wide uppercase text-gray-900 hover:text-gray-600 transition-colors">
+                            Read More →
+                        </a>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="article-card bg-white rounded-2xl p-8 shadow-lg fade-in">
+                        <div class="text-sm tracking-widest uppercase text-gray-500 mb-4">
+                            January 8, 2025
+                        </div>
+                        <h2 class="text-2xl tracking-wide uppercase mb-4 text-gray-900">
+                            <a href="insights/selecting-markets.html" class="hover:text-gray-600 transition-colors">
+                                Selecting Markets with Data: A Practical Playbook
+                            </a>
+                        </h2>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Market selection can make or break a real estate investment. We share our framework for analyzing demographics, employment trends, and supply constraints—using data, not intuition—to identify where to deploy capital.
+                        </p>
+                        <a href="insights/selecting-markets.html" class="text-sm tracking-wide uppercase text-gray-900 hover:text-gray-600 transition-colors">
+                            Read More →
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coming Soon -->
+        <section class="py-16 bg-white/50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+                <h2 class="text-2xl tracking-wide uppercase mb-4 text-gray-900">
+                    More Coming Soon
+                </h2>
+                <p class="text-gray-600 leading-relaxed">
+                    We publish periodically on topics that matter to our work. Subscribe below to get notified when we post new insights.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl tracking-widest uppercase mb-4">Mossback & Co.</h3>
+                    <p class="text-gray-400 text-sm mb-2">Texas, USA</p>
+                    <p class="text-gray-400 text-sm">contact@mossback.co</p>
+                </div>
+
+                <div>
+                    <h4 class="text-sm tracking-widest uppercase mb-4">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white text-sm transition-colors">About</a></li>
+                        <li><a href="focus.html" class="text-gray-400 hover:text-white text-sm transition-colors">Focus</a></li>
+                        <li><a href="technology.html" class="text-gray-400 hover:text-white text-sm transition-colors">Technology</a></li>
+                        <li><a href="insights.html" class="text-gray-400 hover:text-white text-sm transition-colors">Insights</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white text-sm transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm tracking-widest uppercase mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Mossback & Co. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('open');
+            mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.fade-in').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    el.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
