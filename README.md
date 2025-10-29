@@ -94,7 +94,7 @@ The contact form uses FormSubmit.co (free service):
 1. Open `contact.html`
 2. Find line with: `action="https://formsubmit.co/YOUR_EMAIL"`
 3. Replace `YOUR_EMAIL` with your actual email address
-4. Example: `action="https://formsubmit.co/contact@mossback.co"`
+4. Example: `action="https://formsubmit.co/contact@mossbackco.com"`
 
 **Alternative:** Use mailto fallback (less elegant but works):
 - Uncomment the mailto form in `contact.html`
